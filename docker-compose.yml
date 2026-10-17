@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: cloud_ai_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./cloud_resource_utilization.db
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000
+
+  streamlit_dashboard:
+    build: .
+    container_name: cloud_ai_streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://backend:8000
+    depends_on:
+      - backend
+    command: streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0
