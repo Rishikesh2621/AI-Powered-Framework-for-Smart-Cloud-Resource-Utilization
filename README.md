@@ -4,6 +4,20 @@ A comprehensive end-to-end machine learning framework designed to analyze histor
 
 ---
 
+## User Interfaces
+
+### 1. React Web Application (Front Page)
+The primary interactive user dashboard built with React and Vite. It provides live cloud telemetry streams, dynamic scaling decision controls, anomaly state visualization, and cost analysis in Indian Rupees (INR).
+
+![React Web Application Front Page](docs/screenshots/react_frontend.png)
+
+### 2. Streamlit Analytics Portal (http://localhost:8501/)
+The academic analysis and research portal providing multi-model benchmarking (Random Forest, XGBoost, and PyTorch LSTM), dataset profiling, anomaly inspection, and autoscaling policy simulations.
+
+![Streamlit Analytics Dashboard Front Page](docs/screenshots/streamlit_dashboard.png)
+
+---
+
 ## Project Overview
 
 Modern cloud platforms often struggle with the balance between performance and cost. Over-provisioning leads to financial wastage, while under-provisioning leads to service degradation and SLA breaches. Static monitoring tools provide only reactive alerts once thresholds have already been crossed.
@@ -90,6 +104,7 @@ Streamlit Academic Portal                       React Vite Web Application
 |-- notebooks/               # Exploratory data analysis Jupyter notebooks
 |-- tests/                   # Automated test suite (test_pipeline.py)
 |-- docs/                    # Academic report and design specifications
+|   `-- screenshots/         # Dashboard interface screenshots
 |-- models/                  # Serialized model weight artifacts
 |-- Dockerfile               # Container packaging file
 |-- docker-compose.yml       # Multi-service container orchestration
