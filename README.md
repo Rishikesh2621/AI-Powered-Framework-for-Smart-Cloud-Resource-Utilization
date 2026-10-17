@@ -11,7 +11,7 @@ The primary interactive user dashboard built with React and Vite. It provides li
 
 ![React Web Application Front Page](docs/screenshots/react_frontend.png)
 
-### 2. Streamlit Analytics Portal (http://localhost:8501/)
+### 2. Streamlit Analytics Portal 
 The academic analysis and research portal providing multi-model benchmarking (Random Forest, XGBoost, and PyTorch LSTM), dataset profiling, anomaly inspection, and autoscaling policy simulations.
 
 ![Streamlit Analytics Dashboard Front Page](docs/screenshots/streamlit_dashboard.png)
